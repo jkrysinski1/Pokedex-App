@@ -32,7 +32,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         do {
 
-            musicPlayer = try  AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
+            musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path))
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
             musicPlayer.play()
